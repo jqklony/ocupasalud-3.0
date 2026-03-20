@@ -11536,22 +11536,14 @@ const _dateRef = data.fechaCierre ? new Date(data.fechaCierre + "T12:00:00") : n
     /* ── RECOMENDACIONES ────────────────────────────────────── */
     (recomendacionesText || recCheck.length > 0
       ? '<div class="sec"><div class="sec-title">Recomendaciones</div>' +
-        (recCheck.length > 0
-          ? recCheck
-              .map((r) => '<span class="pill ok">✓ ' + r + "</span>")
-              .join("")
-          : "") +
+        "" +
         fmtBlocks(recomendacionesText) +
         "</div>"
       : "") +
     /* ── RESTRICCIONES ──────────────────────────────────────── */
     (restriccionesText || restCheck.length > 0
       ? '<div class="sec"><div class="sec-title">Restricciones Laborales</div>' +
-        (restCheck.length > 0
-          ? restCheck
-              .map((r) => '<span class="pill">⚠ ' + r + "</span>")
-              .join("")
-          : "") +
+        "" +
         fmtBlocks(restriccionesText) +
         "</div>"
       : "") +
