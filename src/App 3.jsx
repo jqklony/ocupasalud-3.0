@@ -14212,7 +14212,7 @@ JSON REQUERIDO (sin markdown, sin texto adicional):
     _ls.setItem("siso_ai_config_version", "v3");
     showAlert("✅ Configuración de IA guardada en la nube.");
   };
-  co} from "lucide-react";
+  };
 
 // ============================================================
 // SECURITY UTILITIES v1.0 - OcupaSalud
@@ -14289,13 +14289,13 @@ const _resetSessionTimer = (logoutCallback) => {
   _sessionTimer = setTimeout(() => {
     if (logoutCallback) logoutCallback();
   }, SESSION_TIMEOUT_MS);
-};nst handleLogin = (u, p) => {
+const handleLogin = (u, p) => {
     // SEC: Rate limiting - verificar bloqueo
     if (_rl.isBlocked()) {
       showAlert(`⛔ Demasiados intentos fallidos. Intente de nuevo en ${_rl.getRemainingMin()} minuto(s).`);
       return;
     }
-const _clearSessionTimer = () => {
+
   if (_sessionTimer) { clearTimeout(_sessionTimer); _sessionTimer = null; }
 };
 
